@@ -27,7 +27,7 @@
     float: right;
 }
 .header h1{
-    padding-top: 200px;
+    padding-top: 350px;
     padding-bottom: 0;
     font-size: 55px;
 }
@@ -35,7 +35,7 @@
     margin: 18px 0;
 }
 .input-group{
-    width: 90%;
+    width: 90% !important;
     max-width: 500px;
     border-radius: 30px;
     background: lightgray;
@@ -106,4 +106,130 @@ h1{
 }
 .feature-details .fa{
     margin-right: 4px;
+}
+.feature-box{
+    box-shadow: 0 0 10px 1px rgba(30, 31, 27, 0.18);
+    margin-bottom: 30px;
+}
+/*------- gallery -------*/
+.gallery{
+    padding: 100px 0; 
+    background: rgb(226, 224, 208);}
+.gallery-box{
+    position: relative; 
+    margin-bottom: 30px;}
+.gallery-box img{
+    width: 100%; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: 1s;}
+.gallery-box img:hover{
+    transform: scale(1.2);}
+.gallery-box h4{
+    display: block; 
+    text-align: center; 
+    font-weight: 600; 
+    font-size: 26px; 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    color: white; 
+    transform: translate(-50%, -50%); 
+    text-shadow: -2px 2px 2px grey;}
+
+/*------- slogan -------*/
+.slogan{
+    height: 80vh; 
+    padding-top: 13%;
+    background-image: url(images_2/pic4.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.slogan-1{
+    padding: 80px 0;
+    background: rgba(255, 250, 250, 0.665);
+    text-align: center;
+    color: black;
+}
+.book-btn{
+    width: 150px;
+    padding: 8px 0;
+    outline: none !important;
+    border: 2px solid goldenrod;
+    border-radius: 50px;
+    background: transparent;
+    color: black;
+    font-weight: 600;
+    margin-top: 10%;
+}
+/*-------- Review --------*/
+.reviews{
+    padding: 5%;
+}
+.c-review{
+    text-align: center;
+    box-shadow: 0 0 10px 0 grey;
+    padding-bottom: 10%;
+}
+.c-review p{
+    padding: 50px 10px 10px 10px;
+}
+.reviews img{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    position: relative;
+    margin: -30px 0 20px 40%;
+}
+.c-review p::before{
+    content: '\201d';
+    display: block;
+    position: absolute;
+    font-size: 80px;
+    color: #bc8c1b;
+    left: 44%;
+    top: -20px;
+    font-family: monospace;
+}
+/*------- footer ------*/
+.footer{
+    padding: 100px 20px;
+    background-image: linear-gradient(#042791, #0fd2d8);
+    color: white;
+}
+.footer-logo{
+    width: 120px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.footer p{
+    font-size: 16px;
+    text-align: justify;
+    padding-right: 30px;
+}
+.footer h4{
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+@media (max-width:770px){
+    .header img{
+        width: 150px;
+        float: left;}
+    .login-btn{
+        width: 80px;}
+    .header h1{
+        font-size: 28px;}
+    .header p{
+        font-size: 10px;
+    }
+    .features h1{
+        font-size: 30px;
+    }
+    .gallery h1{
+        font-size: 30px;
+    }
+    .reviews h1{
+        font-size: 30px;
+    }
 }
