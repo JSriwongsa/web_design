@@ -1,0 +1,114 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Klee One', cursive;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --bg-color:snow;
+    --main-color:lightcoral;
+    --minor-color:rgb(49, 48, 48);
+    --other-color:dimgray;
+    --text-color:black;
+}
+.about{
+    margin-top: 10rem;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+}
+.about-container{
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 100px;
+}
+.about-text{
+    float: left;
+    width: 50%;
+}
+.about-img{
+    float: right;
+    width: 40%;
+}
+.about-img img{
+    width: 100%;
+    height: auto;
+}
+.about-text .tiltle h1{
+    font-size: 36px;
+    font-family: 'Norican', cursive;
+}
+.content p{
+    margin-top: 3%;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: var(--other-color);
+}
+.content .button {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+.content .button a{
+    background-color: var(--main-color);
+    padding: 10px 15px;
+    color: var(--bg-color);
+    font-size: 16px;
+    letter-spacing: 1px;
+    border-radius: 4rem;
+}
+.content .button a:hover{
+    background-color: rgb(239, 197, 197);
+    color: var(--text-color);
+}
+.social{
+    margin-top: 40px;
+}
+.social i{
+    color: var(--main-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+@media(max-width:1000px){
+    .about-container{
+        width: 80%;
+        display: block;
+        margin: auto;
+        padding-top: 50px;
+    }
+    .about-text{
+        float: none;
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+    .about-img{
+        float: none;
+        width: 100%;
+    }
+    .about-img img{
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+    .about-text .tiltle{
+        text-align: center;
+        font-size: 18px;
+    }
+    .content .button {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        cursor: pointer;
+        text-align: center;
+    }
+    .social{
+        text-align: center;
+        margin-bottom: 2%;
+    }
+}
+
+
