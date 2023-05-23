@@ -13,9 +13,6 @@
     --minor-color:rgb(49, 48, 48);
     --other-color:dimgray;
     --text-color:black;
-    --head-font:5rem;
-    --h2-font:3rem;
-    --p-font:1.5rem;
 }
 body{
     width: 100%;
