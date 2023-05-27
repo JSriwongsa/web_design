@@ -1,0 +1,417 @@
+*{    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --bg-color:snow;
+    --main-color:rgb(177, 126, 5);
+    --minor-color:rgb(49, 48, 48);
+    --other-color:dimgray;
+    --text-color:black;
+    --box-shadow:10px 10px 5px rgba(0, 0, 0, 0.5);
+}
+html{
+    font-size: 100%;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    max-width: 1500px;
+    margin: auto;
+    padding: 0 100px;
+}
+header{
+    width: 100%;
+    padding: 1rem 0;
+    background: rgba(243, 241, 241, 0.85);
+    position: fixed;
+    z-index: 1;
+}
+.logo img{
+    display: block;
+    object-fit: cover;
+    width: 15%;
+}
+.logo span{
+    font-family: 'Vujahday Script';
+    font-size: 1rem;
+    font-weight: 600;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar nav{
+    display: flex;
+    align-items: center;
+}
+.navbar nav li{
+    margin: 0 1rem;
+}
+.navbar nav a{
+   font-size: 1rem;
+   color: var(--main-color);
+   font-weight: 600;
+   position: relative;
+   cursor: pointer;
+}
+.navbar nav a:hover{
+    color: var(--other-color);
+}
+.heading-btn i{
+    font-size: 1.5rem;
+    color: var(--main-color);
+    cursor: pointer;
+    display: none;
+}
+#home{
+    background: url(images/header.jpg) no-repeat center center/cover;
+    min-height: 100vh;
+    position: relative;
+    z-index: -10;
+}
+#home::before{
+    content: '';
+    background: rgba(57, 57, 57, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -11;
+}
+.home-content{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.home-content h2{
+    font-size: 3.5rem;
+    font-family: 'Vujahday Script';
+    color: var(--bg-color);
+    text-align: center;
+    letter-spacing: 1px;
+}
+.home-content h3{
+    font-size: 2rem;
+    font-family: 'Vujahday Script';
+    color: var(--bg-color);
+    text-align: center;
+    letter-spacing: 1px;
+}
+/*--------------------------------------------------------------------------------------------------------------------------*/
+#post{
+    padding: 10rem 0 ;
+}
+.post-heading{
+    text-align: center;
+    font-size: 3.5rem;
+    font-family:'Vujahday Script';
+    color: var(--main-color);
+    padding-bottom: 2rem;
+}
+.post-box{
+    display: flex;
+    gap: 1.5rem;
+}
+.post-box .box{
+    width: 33%;
+    background: var(--minor-color);
+    text-align: center;
+    padding-bottom: 1%;
+}
+.post-box .box .post-img{
+    height: 25rem;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.post-box .box .post-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.post-box .box .post-img:hover img{
+    transform: scale(1.1);
+}
+.post-box .box .post-content{
+    padding: 2rem;
+    padding-top: 2rem;
+}
+.post-box .box .post-content h3{
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+.post-box .box .post-content p{
+    font-size: 1rem;
+    color: var(--bg-color);
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+.post-box .box .post-content .post-btn{
+    display: inline-block;
+    width: 50%;
+    border: none;
+    padding: 0.5rem 0;
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    cursor: pointer; 
+    background: var(--minor-color);
+    color: var(--bg-color);
+    transition: all 0.5s ease-in-out;
+}
+.post-box .box .post-content .post-btn:hover{
+    background-color: var(--main-color);
+    color: var(--bg-color); 
+}
+/*--------------------------------------------------------------------------------------------------------------------------*/
+#static{
+    background: url(images/static.jpg) no-repeat center center/cover;
+    padding: 10rem 0;
+    position: relative;
+    z-index: -1;
+}
+#static::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+.static-content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    color: var(--main-color);
+    grid-gap: 2rem;
+}
+.static-num{
+    border: 1px solid var(--main-color);
+    padding: 2rem;
+    color: var(--bg-color);
+    border-radius: 4px;
+}
+.num{
+    font-size: 4.5rem;
+}
+.static-num h2{
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+/*--------------------------------------------------------------------------------------------------------------------------*/
+#chef-special{
+    padding: 10rem 0;
+}
+.special-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    grid-gap: 5rem;
+}
+.special-left-side h3{
+    font-size: 3.5rem;
+    font-family:'Vujahday Script';
+    color: var(--main-color);
+}
+.img-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+.special-imgs{
+    display: flex;
+    align-items: center;
+}
+.special-imgs img{
+    display: block;
+    object-fit: cover;
+    width: 90px;
+    height: 90px;
+}
+.special-img-text{
+    padding-left: 3rem;
+}
+.special-img-text h4{
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding-block-end: 0.5rem;
+}
+.img-container .price{
+    font-weight: 600;
+    font-size: 1rem;
+    border: 1px solid var(--main-color);
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+.special-right{
+    width: 100%;
+}
+.special-right-img img{
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+/*-----------------------------------------------------------------------------------*/
+#reservation{
+    background: url(images/reserve.jpg) no-repeat center center/cover;
+    background-attachment: fixed;
+    padding: 6rem 0;
+}
+.reservation-form{
+    background: rgb(186, 183, 176);
+    padding: 2rem;
+    width: 50%;
+}
+.reservation-form h3{
+    font-size: 3.5rem;
+    font-family:'Vujahday Script';
+    color: var(--main-color);
+    text-align: center;
+}
+.reservation-form form{
+    padding: 2rem 0;
+}
+.reservation-form  form input{
+    width: 49.5%;
+    padding: 0.3rem 0.4rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+.reservation-form  form textarea{
+    width: 100%;
+    padding: 1rem 0.4rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+.reservation-form  form select{
+    width: 49.5%;
+    padding: 0.3rem 0.4rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: white;
+}
+.reservation-form  form button{
+    display: inline-block;
+    width: 100%;
+    border: none;
+    padding: 0.5rem 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; 
+    background: white;
+    transition: all 0.5s ease-in-out;
+}
+.reservation-form  form button:hover{
+    background-color: var(--main-color);
+    color: var(--bg-color); 
+}
+/*--------------------------------------------------------------------------------------------------------------------------*/
+
+
+@media(max-width:1100px){
+    html{
+        font-size: 80%;
+    }
+    .heading-container{
+        padding: 0 60px;
+    }
+    .logo span{
+        font-size: 0.8rem;
+    }
+    .reservation-form{
+        width: 70%;
+    }
+}
+@media(max-width:900px){
+    html{
+        font-size: 60%;
+    }
+    .heading-container{
+        padding: 0 50px;
+    }
+    .heading-btn i{
+        display: block;
+    }
+    .navbar nav{
+        min-width: 100%;
+        min-height: 60vh;
+        position: fixed;
+        flex-direction: column;
+        top: 0;
+        right: 100%;
+        align-items: center;
+        transition: all 0.5s ease-in-out;
+        justify-content: center;
+         background: var(--minor-color);
+    }
+    nav.active{
+        right: 0%;
+        transition: all 0.8s ease-in;
+    }
+    .navbar nav li{
+        margin: 1rem 2rem;
+    }
+    .navbar nav li a{
+        font-size: 1.2rem;
+    }
+    .navbar nav a:hover{
+        color: var(--bg-color);
+    }
+    .close-btn{
+        position: absolute;
+        top: 0;
+        left: 90%;
+        margin: 20px;
+    }
+}
+@media(max-width:780px){
+    .special-content{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .reservation-form{
+        width: 100%;
+    }
+    .reservation-form  form input{
+        width: 100%;
+    }
+    .post-menu .post-box{
+        flex-wrap: wrap;
+    }
+    .post-menu .post-box .box{
+        width: 100%;
+    }
+    .static-content{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media(max-width:450px){
+    html{
+        font-size: 40%;
+    }
+    .static-content{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+
