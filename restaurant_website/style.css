@@ -531,7 +531,14 @@ label{
     .reservation-form  form textarea{
         font-size: 1rem;
     }
-
+    .col{
+        width: 500px; 
+    }
+}
+@media(max-width:500px){
+    .col{
+        width: 400px; 
+    }
 }
 @media(max-width:450px){
     html{
@@ -539,6 +546,11 @@ label{
     }
     .static-content{
         grid-template-columns: repeat(1,1fr);
+    }
+}
+@media(max-width:350px){
+    .col{
+        width: 250px; 
     }
 }
 
