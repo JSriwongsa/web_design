@@ -31,7 +31,7 @@ header{
     padding: 1rem 0;
     background: rgba(243, 241, 241, 0.85);
     position: fixed;
-    z-index: 1;
+    z-index: 10;
 }
 .logo img{
     display: block;
@@ -71,6 +71,7 @@ header{
     cursor: pointer;
     display: none;
 }
+/*--------------------------------------------------------------------------------------------------------------------------*/
 #home{
     background: url(images/header.jpg) no-repeat center center/cover;
     min-height: 100vh;
@@ -203,8 +204,12 @@ header{
     color: var(--bg-color);
     border-radius: 4px;
 }
+.static-num i{
+    font-size: 5rem;
+    color: var(--main-color);
+}
 .num{
-    font-size: 4.5rem;
+    font-size: 3rem;
 }
 .static-num h2{
     font-size: 1.5rem;
@@ -274,26 +279,28 @@ header{
     padding: 6rem 0;
 }
 .reservation-form{
-    background: rgb(186, 183, 176);
+    background: var(--main-color);
     padding: 2rem;
     width: 50%;
 }
 .reservation-form h3{
     font-size: 3.5rem;
     font-family:'Vujahday Script';
-    color: var(--main-color);
+    color: var(--bg-color);
     text-align: center;
 }
 .reservation-form form{
     padding: 2rem 0;
 }
-.reservation-form  form input{
+.reservation-form  form .input1{
     width: 49.5%;
     padding: 0.3rem 0.4rem;
     margin-bottom: 1rem;
     border: none;
     border-radius: 5px;
     outline: none;
+    font-size: 1rem;
+    text-align: left;
 }
 .reservation-form  form textarea{
     width: 100%;
@@ -305,11 +312,12 @@ header{
 }
 .reservation-form  form select{
     width: 49.5%;
-    padding: 0.3rem 0.4rem;
+    padding: 0.7rem 0.4rem;
     margin-bottom: 1rem;
     border: none;
     border-radius: 5px;
     background: white;
+    font-size: 1rem;
 }
 .reservation-form  form button{
     display: inline-block;
@@ -323,8 +331,121 @@ header{
     transition: all 0.5s ease-in-out;
 }
 .reservation-form  form button:hover{
-    background-color: var(--main-color);
+    background-color: rgb(205, 171, 93);
     color: var(--bg-color); 
+}
+/*--------------------------------------------------------------------------------------------------------------------------*/
+#chef{
+    padding: 10rem 0 ;
+}
+.chef-heading{
+    text-align: center;
+    font-size: 3.5rem;
+    font-family:'Vujahday Script';
+    color: var(--main-color);
+    padding-bottom: 2rem;
+}
+.team-chef{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 1.5rem;
+}
+.team-chef .chef-item .chef-img{
+    height: 35rem;
+    width: 100%;
+}
+.team-chef .chef-item .chef-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.team-chef .chef-item{
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+.team-chef .chef-item:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+}
+.team-chef .chef-item:hover.chef-item:before{
+    display: block;
+}
+.team-chef .chef-item .chef-info{
+    position: absolute;
+    top: 130%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: 1s;
+    cursor: pointer;
+}
+.team-chef .chef-item .chef-info h3{
+    font-size: 1.5rem;
+    color: var(--main-color);
+    padding: 0.5rem 0;
+}
+.team-chef .chef-item .chef-info span{
+    font-size: 1.1rem;
+    color: var(--bg-color);
+    font-weight: 500;
+}
+.team-chef .chef-item .chef-info ul{
+    display: flex;
+    grid-gap: 2rem;
+    padding: 2rem 0;
+}
+.team-chef .chef-item .chef-info ul li a{
+    color: var(--main-color);
+    font-size: 1rem;
+}
+.team-chef .chef-item:hover .chef-info{
+    top: 0;
+}
+/*--------------------------------------------------------------------------------------------------------------------------*/
+.countdown .title{
+    margin-top: 10px;
+    font-size: 3.5rem;
+    font-weight: 600;
+    font-family: 'Vujahday Script';
+    color: var(--main-color);
+    text-align: center;
+    letter-spacing: 1px;
+}
+.col{
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    color: var(--bg-color);
+}
+.col div{
+    width: 250px;
+    text-align: center;
+}
+input{
+    width: 50%;
+    height: 50px;
+    border-color: transparent;
+    text-align: center;
+    font-size: 2rem;
+}
+label{
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 /*--------------------------------------------------------------------------------------------------------------------------*/
 
@@ -392,7 +513,7 @@ header{
     .reservation-form{
         width: 100%;
     }
-    .reservation-form  form input{
+    .reservation-form  form .input1{
         width: 100%;
     }
     .post-menu .post-box{
@@ -404,6 +525,13 @@ header{
     .static-content{
         grid-template-columns: repeat(2,1fr);
     }
+    .reservation-form  form select{
+        width: 100%;
+    }
+    .reservation-form  form textarea{
+        font-size: 1rem;
+    }
+
 }
 @media(max-width:450px){
     html{

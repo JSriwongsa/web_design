@@ -12,8 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Montserrat:wght@300;400;500;600;700;800;900&family=Norican&family=Poppins:ital,wght@0,100;0,300;1,100;1,300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Montserrat:wght@300;400;500;600;700;800;900&family=Norican&family=Vujahday+Script&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Montserrat:wght@300;400;500;600;700;800;900&family=Norican&family=Permanent+Marker&family=Vujahday+Script&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -29,7 +28,7 @@
                     </div>
                     <li><a href="">HOME</a></li>
                     <li><a href="">MENU</a></li>
-                    <li><a href="">ORDERING</a></li>
+                    <li><a href="">ORDER</a></li>
                     <li><a href="#reservation">RESERVATION</a></li>
                     <li><a href="">ABOUT</a></li>
                     <li><a href="">CONTACT</a></li>
@@ -46,6 +45,23 @@
             <div class="home-content">
                 <h2>HAVE A GOOD DAY WITH A GOOD MEAL</h2>
                 <h3>Fresh ingredients make great food.</h3>
+                <div class="countdown">
+                    <div class="title" id="open-time">We are open at 17:00</div>
+                    <div class="col">
+                        <div>
+                            <input type="text" readonly value="0"><br>
+                            <label for="">Hours</label>
+                        </div>
+                        <div>
+                            <input type="text" readonly value="0"><br>
+                            <label for="">Minutes</label>
+                        </div>
+                        <div>
+                            <input type="text" readonly value="0"><br>
+                            <label for="">Seconds</label>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -97,18 +113,22 @@
         <div class="container">
             <div class="static-content">
                 <div class="static-num">
+                    <i class="fa-solid fa-award"></i>
                     <div class="num" data="293">293</div>
                     <h2>Best Dishes</h2>
                 </div>
                 <div class="static-num">
+                    <i class="fa-solid fa-trophy"></i>
                     <div class="num" data="999">999</div>
                     <h2>Awards won</h2>
                 </div>
                 <div class="static-num">
+                    <i class="fa-solid fa-medal"></i>
                     <div class="num" data="148">148</div>
                     <h2>Our Chefs</h2>
                 </div>
                 <div class="static-num">
+                    <i class="fa-solid fa-star"></i>
                     <div class="num" data="278">278</div>
                     <h2>Daily Customers</h2>
                 </div>
@@ -122,7 +142,7 @@
             <div class="special-content">
                 <div class="special-left">
                     <div class="special-left-side">
-                        <h3>Chef's Special</h3>
+                        <h3>Most Popular Dishes</h3>
                     </div>
                     <!--chef1-->
                     <div class="img-container">
@@ -191,11 +211,11 @@
             <div class="reservation-form">
                 <h3>Reservation</h3>
                 <form action="">
-                    <input type="text" placeholder="First name">
-                    <input type="text" placeholder="Phone number">
-                    <input type="email" placeholder="Email">
-                    <input type="number" placeholder="Number of guests" min="1">
-                    <input type="date" placeholder="Date">
+                    <input class="input1" type="text" placeholder="First name">
+                    <input class="input1" type="text" placeholder="Phone number">
+                    <input class="input1" type="email" placeholder="Email">
+                    <input class="input1" type="number" placeholder="Number of guests" min="1">
+                    <input class="input1" type="date" placeholder="Pick Date">
                     <select name="hours">
                         <option value="hour-select">Select your time</option>
                         <option value="10">17:00</option>
@@ -217,7 +237,102 @@
         </div>
     </section>
 
-    <script src="main.js"></script>
+    <section class="our-chef" id="chef">
+        <div class="container">
+            <h1 class="chef-heading">Meet Our Chefs</h1>
+            <div class="team-chef">
+                <div class="chef-item">
+                    <div class="chef-img">
+                        <img src="images/c1.jpg">
+                    </div>
+                    <div class="chef-info">
+                        <div>
+                            <h3>John Doe</h3>
+                            <span>Executive Chef</span>
+                            <ul>
+                                <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-square-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chef-item">
+                    <div class="chef-img">
+                        <img src="images/c2.jpg">
+                    </div>
+                    <div class="chef-info">
+                        <div>
+                            <h3>John Doe</h3>
+                            <span>Head Chef</span>
+                            <ul>
+                                <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-square-twitter"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-square-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chef-item">
+                    <div class="chef-img">
+                        <img src="images/c3.jpg">
+                    </div>
+                    <div class="chef-info">
+                        <div>
+                            <h3>Jane Doe</h3>
+                            <span>Deputy Chef</span>
+                            <ul>
+                                <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-square-twitter"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-square-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+    </section>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
+    <script src="main.js"></script>
+
 </body>
 </html>
