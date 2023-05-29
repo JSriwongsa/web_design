@@ -1,3 +1,22 @@
+const nav = document.querySelector("header");
+window.addEventListener("scroll", function(){
+  if(this.document.documentElement.scrollTop>20){
+    nav.classList.add("sticky");
+  }
+  else{
+    nav.classList.remove("sticky");
+  }
+
+})
+
+const Parallax = document.querySelector("#home");
+window.addEventListener("scroll", function(){
+  let offset = window.pageYOffset;
+  Parallax.style.backgroundPositionY = offset * 0.5 +"px";
+});
+
+
+//menu 
 let menu = document.querySelector('nav')
 let menubtn = document.querySelector('.menu-btn')
 let closebtn = document.querySelector('.close-btn')
@@ -9,6 +28,7 @@ closebtn.addEventListener('click', function(){
     menu.classList.remove('active');
 });
 
+//static
 
 const staticContentE1 = document.querySelectorAll('.num');
 
@@ -32,6 +52,7 @@ staticContentE1.forEach((staticContentE1) =>{
   }
 });
 
+//countdown
 
 const openTimeStr = "We are open at 17:00"
 const openTime = parseInt(openTimeStr.substring(15, 20));
@@ -99,3 +120,5 @@ setInterval(
   },
   1000
 )
+
+

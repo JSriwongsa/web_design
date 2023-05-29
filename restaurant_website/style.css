@@ -32,6 +32,10 @@ header{
     background: rgba(243, 241, 241, 0.85);
     position: fixed;
     z-index: 10;
+    transition: all 0.5s ease-in-out;
+}
+header.sticky{
+    background: var(--bg-color);
 }
 .logo img{
     display: block;
@@ -448,6 +452,52 @@ label{
     font-weight: 600;
 }
 /*--------------------------------------------------------------------------------------------------------------------------*/
+#footer{
+    background: var(--minor-color);
+    padding: 3rem 0;
+    color: var(--bg-color);
+    font-size: 1rem;
+}
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 2rem;
+}
+.footer-container h2{
+    padding-bottom: 1.5rem;
+}
+.about-us img{
+    display: block;
+    object-fit: cover;
+    width: 50%;
+}
+.about-us p{
+    line-height: 1.5;
+    font-size: 0.8rem;
+}
+.open-hours h2{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--main-color);
+}
+.open-hours .day{
+    font-size: 0.8rem;
+}
+.open-hours span{
+    color: var(--main-color);
+}
+.contact h2{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--main-color);
+}
+.contact p{
+    font-size: 0.8rem;
+}
+.contact .call, .email, .address{
+    color: var(--main-color);
+}
+/*--------------------------------------------------------------------------------------------------------------------------*/
 
 
 @media(max-width:1100px){
@@ -534,10 +584,16 @@ label{
     .col{
         width: 500px; 
     }
+    .footer-container{
+        grid-template-columns: repeat(3,1fr);
+    }
 }
 @media(max-width:500px){
     .col{
         width: 400px; 
+    }
+    .reservation-form  form .input1{
+        width: 100%;
     }
 }
 @media(max-width:450px){
@@ -546,6 +602,13 @@ label{
     }
     .static-content{
         grid-template-columns: repeat(1,1fr);
+    }
+    .footer-container{
+
+        grid-template-columns: repeat(1,1fr);
+    }
+    .about-us img{
+        width: 30%;
     }
 }
 @media(max-width:350px){
