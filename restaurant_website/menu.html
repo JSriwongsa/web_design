@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Menu</title>
     <link rel="shortcut icon" href="images/logo.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="menu.css">
@@ -17,33 +17,32 @@
     
 </head>
 <body>
-    <script id="replace_with_navbar" src="nav.js"></script>
-
-    <section class="container" id="menu-container">
-        <div class="menu">
-            <h2 class="menu-group-heading">Soup</h2>
-            <div class="menu-group">
-            <div class="menu-item">
-                <div class="menu-item-text">
-                <h3 class="menu-item-heading">
-                    <span class="menu-item-name">Miso Soup</span>
-                    <span class="menu-item-price">$3.99</span>
-                </h3>
-                <p class="menu-item-desc">Soybean based soup with tofu, seaweed, scallion.</p>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href=""><img src="images/logo.png"></a>
+                    <span>FUJISAN</span>
                 </div>
-            </div>
-            <div class="menu-item">
-                <div class="menu-item-text">
-                <h3 class="menu-item-heading">
-                    <span class="menu-item-name">Spicy Miso Soup</span>
-                    <span class="menu-item-price">$3.99</span>
-                </h3>
-                <p class="menu-item-desc">Soybean based soup with tofu, seaweed, scallion, jalapeno, and spicy sauce.</p>
+                <nav>
+                    <div class="heading-btn">
+                        <i class="close-btn fas fa-times-circle"></i>
+                    </div>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="menu.html">MENU</a></li>
+                    <li><a href="">ORDER</a></li>
+                    <li><a href="">RESERVATION</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">CONTACT</a></li>
+                </nav>
+                <div class="heading-btn">
+                    <i class="menu-btn fas fa-bars"></i>
                 </div>
             </div>
         </div>
+    </header>
 
-
+    <section class="container" id="menu-container">
         <div class="menu">
           <h2 class="menu-group-heading">Appetizers</h2>
           <div class="menu-group">
@@ -132,6 +131,29 @@
                 </div>
             </div>
           </div>
+        </div>
+
+        <div class="menu">
+            <h2 class="menu-group-heading">Soup</h2>
+            <div class="menu-group">
+            <div class="menu-item">
+                <div class="menu-item-text">
+                <h3 class="menu-item-heading">
+                    <span class="menu-item-name">Miso Soup</span>
+                    <span class="menu-item-price">$3.99</span>
+                </h3>
+                <p class="menu-item-desc">Soybean based soup with tofu, seaweed, scallion.</p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-text">
+                <h3 class="menu-item-heading">
+                    <span class="menu-item-name">Spicy Miso Soup</span>
+                    <span class="menu-item-price">$3.99</span>
+                </h3>
+                <p class="menu-item-desc">Soybean based soup with tofu, seaweed, scallion, jalapeno, and spicy sauce.</p>
+                </div>
+            </div>
         </div>
 
         <div class="menu">
@@ -653,7 +675,7 @@
             </div>
         </div>
     </section>
-    
+
     <script src="main.js"></script>
 
 </body>
