@@ -1,0 +1,161 @@
+*{    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --bg-color:snow;
+    --main-color:rgb(177, 126, 5);
+    --minor-color:rgb(49, 48, 48);
+    --other-color:rgb(232, 229, 229);
+    --text-color:black;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+}
+.container{
+    display: grid;
+    grid-template-columns: 250px 1fr 300px;
+    height: 100%;
+    overflow: hidden;
+}
+#menu{
+    background: var(--bg-color);
+}
+.menu-logo{
+    padding: 0 30px;
+}
+.menu-logo img{
+    width: 150px;
+    height: 150px;
+    margin-top: 1.5rem;
+}
+.menu-items a{
+    display: block;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 30px;
+    margin: 12px 0;
+    color: var(--main-color);
+    font-weight: 600;
+}
+.menu-items a:hover{
+    background: var(--other-color);
+}
+#food-container{
+    background: var(--bg-color);
+    overflow: scroll;
+    overflow-x: hidden;
+    box-sizing: content-box;
+}
+#menu-header{
+    align-items: center;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+#food-container{
+    scrollbar-width: none;
+}
+#menu-header .address{
+    font-size: 0.8rem;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    padding: 5px 10px;
+    border-radius: 10px;
+    width: 100px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.utility i{
+    font-size: 0.8rem;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    padding: 5px 10px;
+    border-radius: 50px;
+    width: 100px;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 1rem;
+}
+.utility i:active{
+    background: var(--main-color);
+    color: var(--bg-color);
+}
+#appetizer, #soup, #salad, #nigiri, #sushi, #maki, #don, #drink, #dessert{
+    margin-top: 40px;
+}
+#appetizer #item-box, #soup #item-box, #salad #item-box, #nigiri #item-box, #sushi #item-box, #maki #item-box, #don #item-box, #drink #item-box, #dessert #item-box{
+    background-color: var(--other-color);
+}
+#category-name, .menu-items{
+    margin: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--main-color);
+    font-family: 'Vujahday Script';
+}
+#box-top{
+    display: flex;
+    margin: 5px 0;
+    justify-content: space-between;
+}
+#rating{
+    font-size: 0.6rem;   
+    color: var(--main-color);
+    padding: 5px;
+    background: var(--minor-color);
+    border-radius: 10px;
+}
+.fa-heart{
+    font-size: 1rem;
+    color: var(--main-color);
+}
+.toggle-heart{
+    background: red;
+    color: white;
+}
+#item-box{
+    width: 180px;
+    height: 220px;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    background: var(--main-color);
+    cursor: pointer;
+    transition: 0.5s all ease-in-out;
+}
+#item-box img{
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+#order-name{
+    margin: 5px 0;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+#cart{
+    background: var(--bg-color);  
+}
