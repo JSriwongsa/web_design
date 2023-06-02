@@ -1,3 +1,4 @@
+//sticky navbar
 const nav = document.querySelector("header");
 window.addEventListener("scroll", function(){
   if(this.document.documentElement.scrollTop>20){
@@ -9,6 +10,7 @@ window.addEventListener("scroll", function(){
 
 })
 
+//parallax effect
 const Parallax = document.querySelector("#home");
 window.addEventListener("scroll", function(){
   let offset = window.pageYOffset;
@@ -120,5 +122,7 @@ setInterval(
   },
   1000
 )
+
+//-------------------------------------------end JavaScript for index page----------------------------------------------
 
 
