@@ -126,7 +126,7 @@ body{
 }
 #item-box{
     width: 180px;
-    height: 220px;
+    height: 240px;
     padding: 10px;
     margin: 10px;
     display: inline-block;
@@ -141,6 +141,9 @@ body{
     margin: auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
+}
+#item-box p{
+    font-size: 0.8rem;
 }
 #order-name{
     margin: 5px 0;
