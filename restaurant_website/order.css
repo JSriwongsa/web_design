@@ -212,13 +212,15 @@ body{
 }
 /*--------------------------------------------------------------------------------------------------------------------------*/
 #food-items{
-    display: none;
+    
 }
 #category-list{
-    display: none;
+    
 }
 /*--------------------------------------------------------------------------------------------------------------------------*/
-
+.cart-toggle{
+    display: none;
+}
 #cart-page{
     background: var(--other-color);
     margin: 40px 10px;
@@ -302,4 +304,5 @@ body{
     background: var(--minor-color);
     color: var(--bg-color);
 }
+
 

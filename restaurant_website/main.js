@@ -1,4 +1,5 @@
-//sticky navbar
+//sticky navbar ---------------------------------------------
+
 const nav = document.querySelector("header");
 window.addEventListener("scroll", function(){
   if(this.document.documentElement.scrollTop>20){
@@ -7,18 +8,18 @@ window.addEventListener("scroll", function(){
   else{
     nav.classList.remove("sticky");
   }
-
 })
 
-//parallax effect
+//parallax effect ---------------------------------------------
+
 const Parallax = document.querySelector("#home");
 window.addEventListener("scroll", function(){
   let offset = window.pageYOffset;
   Parallax.style.backgroundPositionY = offset * 0.5 +"px";
 });
 
+//menu ---------------------------------------------
 
-//menu 
 let menu = document.querySelector('nav')
 let menubtn = document.querySelector('.menu-btn')
 let closebtn = document.querySelector('.close-btn')
@@ -30,7 +31,7 @@ closebtn.addEventListener('click', function(){
     menu.classList.remove('active');
 });
 
-//static
+//static ---------------------------------------------
 
 const staticContentE1 = document.querySelectorAll('.num');
 
@@ -54,7 +55,7 @@ staticContentE1.forEach((staticContentE1) =>{
   }
 });
 
-//countdown
+//countdown ---------------------------------------------
 
 const openTimeStr = "We are open at 17:00"
 const openTime = parseInt(openTimeStr.substring(15, 20));
