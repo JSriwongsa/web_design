@@ -82,14 +82,18 @@ body{
     color: var(--main-color);
     padding: 5px 10px;
     border-radius: 50px;
-    width: 100px;
+    width: 120px;
     overflow: hidden;
     cursor: pointer;
     margin: 1rem;
+    text-align: center;
 }
 .utility i:active{
     background: var(--main-color);
     color: var(--bg-color);
+}
+.food-items{
+    
 }
 #appetizer, #soup, #salad, #nigiri, #sushi, #maki, #don, #drink, #dessert{
     margin-top: 40px;
@@ -120,9 +124,8 @@ body{
     font-size: 1rem;
     color: var(--main-color);
 }
-.toggle-heart{
-    background: red;
-    color: white;
+.toggle-cart{
+    color: var(--text-color);
 }
 #item-box{
     width: 180px;

@@ -1,8 +1,8 @@
-const fooditem = [
+const foodItem = [
     {
         id:1,
         name: 'Edamame',
-        category: 'Appetizers',
+        category: 'appetizer',
         rating: 4.3,
         price:6.00,
         img:'images/order/1.jpg',
@@ -11,7 +11,7 @@ const fooditem = [
     {
         id:2,
         name: 'Spicy Edamame',
-        category: 'Appetizers',
+        category: 'appetizer',
         rating: 4.3,
         price:6.00,
         img:'images/order/2.jpg',
@@ -20,7 +20,7 @@ const fooditem = [
     {
         id:3,
         name: 'Gyoza',
-        category: 'Appetizers',
+        category: 'appetizer',
         rating: 4.3,
         price:7.99,
         img:'images/order/3.jpg',
@@ -29,7 +29,7 @@ const fooditem = [
     {
         id:4,
         name: 'Takoyaki',
-        category: 'Appetizers',
+        category: 'appetizer',
         rating: 4.3,
         price:6.99,
         img:'images/order/4.jpg',
@@ -38,7 +38,7 @@ const fooditem = [
     {
         id:5,
         name: 'Ebi Okonomiyaki',
-        category: 'Appetizers',
+        category: 'appetizer',
         rating: 4.3,
         price:13.99,
         img:'images/order/5.jpg',
@@ -47,7 +47,7 @@ const fooditem = [
     {
         id:6,
         name: 'Sake Carpaccio',
-        category: 'Appetizers',
+        category: 'appetizer',
         rating: 4.3,
         price:12.99,
         img:'images/order/6.jpg',
@@ -56,7 +56,7 @@ const fooditem = [
     {
         id:7,
         name: 'Hamachi Carpaccio',
-        category: 'Appetizers',
+        category: 'appetizer',
         rating: 4.3,
         price:13.99,
         img:'images/order/7.jpg',
@@ -65,7 +65,7 @@ const fooditem = [
     {
         id:8,
         name: 'Soft Shell Crab',
-        category: 'Appetizers',
+        category: 'appetizer',
         rating: 4.3,
         price:12.99,
         img:'images/order/8.jpg',
@@ -74,7 +74,7 @@ const fooditem = [
     {
         id:9,
         name: 'Shrimp Tempura',
-        category: 'Appetizers',
+        category: 'appetizer',
         rating: 4.3,
         price:13.99,
         img:'images/order/9.jpg',
@@ -83,7 +83,7 @@ const fooditem = [
     {
         id:10,
         name: 'Miso Soup',
-        category: 'Soup',
+        category: 'soup',
         rating: 4.3,
         price:3.99,
         img:'images/order/10.jpg',
@@ -92,7 +92,7 @@ const fooditem = [
     {
         id:11,
         name: 'Spicy Miso Soup',
-        category: 'Soup',
+        category: 'soup',
         rating: 4.3,
         price:3.99,
         img:'images/order/11.jpg',
@@ -101,7 +101,7 @@ const fooditem = [
     {
         id:12,
         name: 'House Salad',
-        category: 'Sunomono Salad',
+        category: 'salad',
         rating: 4.3,
         price:6.99,
         img:'images/order/12.jpg',
@@ -110,7 +110,7 @@ const fooditem = [
     {
         id:13,
         name: 'Seaweed Salad',
-        category: 'Sunomono Salad',
+        category: 'salad',
         rating: 4.3,
         price:7.99,
         img:'images/order/13.jpg',
@@ -119,7 +119,7 @@ const fooditem = [
     {
         id:14,
         name: 'Cucumber Salad',
-        category: 'Sunomono Salad',
+        category: 'salad',
         rating: 4.3,
         price:5.99,
         img:'images/order/14.jpg',
@@ -128,7 +128,7 @@ const fooditem = [
     {
         id:15,
         name: 'Tako Su',
-        category: 'Sunomono Salad',
+        category: 'salad',
         rating: 4.3,
         price:8.99,
         img:'images/order/15.jpg',
@@ -137,7 +137,7 @@ const fooditem = [
     {
         id:16,
         name: 'Ebi Su',
-        category: 'Sunomono Salad',
+        category: 'salad',
         rating: 4.3,
         price:7.99,
         img:'images/order/16.jpg',
@@ -146,7 +146,7 @@ const fooditem = [
     {
         id:17,
         name: 'Mixed Sunomono',
-        category: 'Sunomono Salad',
+        category: 'salad',
         rating: 4.3,
         price:11.99,
         img:'images/order/17.jpg',
@@ -155,7 +155,7 @@ const fooditem = [
     {
         id:18,
         name: 'Spicy maguro poke Salad',
-        category: 'Sunomono Salad',
+        category: 'salad',
         rating: 4.3,
         price:12.99,
         img:'images/order/18.jpg',
@@ -164,7 +164,7 @@ const fooditem = [
     {
         id:19,
         name: 'Sake/Smoked Sake',
-        category: 'Nigiri/Sashimi',
+        category: 'nigiri',
         rating: 4.3,
         price:7.99,
         img:'images/order/19.jpg',
@@ -173,7 +173,7 @@ const fooditem = [
     {
         id:20,
         name: 'Maguro/Shiro Maguro',
-        category: 'Nigiri/Sashimi',
+        category: 'nigiri',
         rating: 4.3,
         price:8.99,
         img:'images/order/20.jpg',
@@ -182,7 +182,7 @@ const fooditem = [
     {
         id:21,
         name: 'Hamachi',
-        category: 'Nigiri/Sashimi',
+        category: 'nigiri',
         rating: 4.3,
         price:7.99,
         img:'images/order/21.jpg',
@@ -191,7 +191,7 @@ const fooditem = [
     {
         id:22,
         name: 'Saba',
-        category: 'Nigiri/Sashimi',
+        category: 'nigiri',
         rating: 4.3,
         price:8.99,
         img:'images/order/22.jpg',
@@ -200,7 +200,7 @@ const fooditem = [
     {
         id:23,
         name: 'Ebi',
-        category: 'Nigiri/Sashimi',
+        category: 'nigiri',
         rating: 4.3,
         price:7.99,
         img:'images/order/23.jpg',
@@ -209,7 +209,7 @@ const fooditem = [
     {
         id:24,
         name: 'Hotate',
-        category: 'Nigiri/Sashimi',
+        category: 'nigiri',
         rating: 4.3,
         price:8.99,
         img:'images/order/24.jpg',
@@ -218,7 +218,7 @@ const fooditem = [
     {
         id:25,
         name: 'Kani Kama',
-        category: 'Nigiri/Sashimi',
+        category: 'nigiri',
         rating: 4.3,
         price:7.99,
         img:'images/order/25.jpeg',
@@ -227,7 +227,7 @@ const fooditem = [
     {
         id:26,
         name: 'Unagi',
-        category: 'Nigiri/Sashimi',
+        category: 'nigiri',
         rating: 4.3,
         price:8.99,
         img:'images/order/26.jpg',
@@ -236,7 +236,7 @@ const fooditem = [
     {
         id:27,
         name: 'Ikura',
-        category: 'Nigiri/Sashimi',
+        category: 'nigiri',
         rating: 4.3,
         price:7.99,
         img:'images/order/27.jpg',
@@ -245,7 +245,7 @@ const fooditem = [
     {
         id:28,
         name: 'Masago',
-        category: 'Nigiri/Sashimi',
+        category: 'nigiri',
         rating: 4.3,
         price:8.99,
         img:'images/order/28.jpg',
@@ -254,7 +254,7 @@ const fooditem = [
     {
         id:29,
         name: 'Tamago',
-        category: 'Nigiri/Sashimi',
+        category: 'nigiri',
         rating: 4.3,
         price:7.99,
         img:'images/order/29.jpg',
@@ -263,7 +263,7 @@ const fooditem = [
     {
         id:30,
         name: 'Wagyu Nigiri',
-        category: 'Nigiri/Sashimi',
+        category: 'nigiri',
         rating: 4.3,
         price:12.99,
         img:'images/order/30.jpeg',
@@ -272,7 +272,7 @@ const fooditem = [
     {
         id:31,
         name: 'Sushi A',
-        category: 'Sushi/Sashimi Platters',
+        category: 'sushi',
         rating: 4.3,
         price:19.99,
         img:'images/order/31.jpg',
@@ -281,7 +281,7 @@ const fooditem = [
     {
         id:32,
         name: 'Sushi B',
-        category: 'Sushi/Sashimi Platters',
+        category: 'sushi',
         rating: 4.3,
         price:23.99,
         img:'images/order/31.jpg',
@@ -290,7 +290,7 @@ const fooditem = [
     {
         id:33,
         name: 'Sashimi A',
-        category: 'Sushi/Sashimi Platters',
+        category: 'sushi',
         rating: 4.3,
         price:35.99,
         img:'images/order/31.jpg',
@@ -299,7 +299,7 @@ const fooditem = [
     {
         id:34,
         name: 'Sashimi B',
-        category: 'Sushi/Sashimi Platters',
+        category: 'sushi',
         rating: 4.3,
         price:39.99,
         img:'images/order/31.jpg',
@@ -308,7 +308,7 @@ const fooditem = [
     {
         id:35,
         name: 'Super Sashimi',
-        category: 'Sushi/Sashimi Platters',
+        category: 'sushi',
         rating: 4.3,
         price:45.99,
         img:'images/order/31.jpg',
@@ -317,7 +317,7 @@ const fooditem = [
     {
         id:36,
         name: 'Tekka',
-        category: 'Maki (Rolls)',
+        category: 'maki',
         rating: 4.3,
         price:9.99,
         img:'images/order/32.jpg',
@@ -326,7 +326,7 @@ const fooditem = [
     {
         id:37,
         name: 'Sake',
-        category: 'Maki (Rolls)',
+        category: 'maki',
         rating: 4.3,
         price:9.99,
         img:'images/order/33.jpg',
@@ -335,7 +335,7 @@ const fooditem = [
     {
         id:38,
         name: 'Negi Hamachi',
-        category: 'Maki (Rolls)',
+        category: 'maki',
         rating: 4.3,
         price:9.99,
         img:'images/order/34.jpg',
@@ -344,7 +344,7 @@ const fooditem = [
     {
         id:39,
         name: 'Ebi',
-        category: 'Maki (Rolls)',
+        category: 'maki',
         rating: 4.3,
         price:9.99,
         img:'images/order/35.jpg',
@@ -353,7 +353,7 @@ const fooditem = [
     {
         id:40,
         name: 'Sake Avocado',
-        category: 'Maki (Rolls)',
+        category: 'maki',
         rating: 4.3,
         price:9.99,
         img:'images/order/36.jpg',
@@ -362,7 +362,7 @@ const fooditem = [
     {
         id:41,
         name: 'Unagi Q',
-        category: 'Maki (Rolls)',
+        category: 'maki',
         rating: 4.3,
         price:9.99,
         img:'images/order/37.jpg',
@@ -371,7 +371,7 @@ const fooditem = [
     {
         id:42,
         name: 'Spicy Scallop',
-        category: 'Maki (Rolls)',
+        category: 'maki',
         rating: 4.3,
         price:9.99,
         img:'images/order/38.jpg',
@@ -380,7 +380,7 @@ const fooditem = [
     {
         id:43,
         name: 'Spicy Tako',
-        category: 'Maki (Rolls)',
+        category: 'maki',
         rating: 4.3,
         price:9.99,
         img:'images/order/39.jpg',
@@ -389,7 +389,7 @@ const fooditem = [
     {
         id:44,
         name: 'Spider',
-        category: 'Maki (Rolls)',
+        category: 'maki',
         rating: 4.3,
         price:12.99,
         img:'images/order/40.jpg',
@@ -398,7 +398,7 @@ const fooditem = [
     {
         id:45,
         name: 'Alaska',
-        category: 'Maki (Rolls)',
+        category: 'maki',
         rating: 4.3,
         price:13.99,
         img:'images/order/41.jpg',
@@ -407,7 +407,7 @@ const fooditem = [
     {
         id:46,
         name: 'Boston',
-        category: 'Maki (Rolls)',
+        category: 'maki',
         rating: 4.3,
         price:13.99,
         img:'images/order/42.jpg',
@@ -416,7 +416,7 @@ const fooditem = [
     {
         id:47,
         name: 'Philadelphia',
-        category: 'Maki (Rolls)',
+        category: 'maki',
         rating: 4.3,
         price:13.99,
         img:'images/order/43.jpg',
@@ -425,7 +425,7 @@ const fooditem = [
     {
         id:48,
         name: 'California',
-        category: 'Maki (Rolls)',
+        category: 'maki',
         rating: 4.3,
         price:13.99,
         img:'images/order/44.jpg',
@@ -434,7 +434,7 @@ const fooditem = [
     {
         id:49,
         name: 'Chicago',
-        category: 'Maki (Rolls)',
+        category: 'maki',
         rating: 4.3,
         price:13.99,
         img:'images/order/45.jpg',
@@ -443,7 +443,7 @@ const fooditem = [
     {
         id:50,
         name: 'Sake Donburi',
-        category: 'Donburi',
+        category: 'don',
         rating: 4.3,
         price:16.99,
         img:'images/order/46.jpg',
@@ -452,16 +452,16 @@ const fooditem = [
     {
         id:51,
         name: 'Tekka Donburi',
-        category: 'Donburi',
+        category: 'don',
         rating: 4.3,
         price:17.99,
-        img:'images/order/47.jpg',
+        img:'images/order/47.jpeg',
         quantity:1
     },
     {
         id:52,
         name: 'Hamachi Donburi',
-        category: 'Donburi',
+        category: 'don',
         rating: 4.3,
         price:17.99,
         img:'images/order/48.jpg',
@@ -470,7 +470,7 @@ const fooditem = [
     {
         id:53,
         name: 'Chirashi Donburi',
-        category: 'Donburi',
+        category: 'don',
         rating: 4.3,
         price:19.99,
         img:'images/order/49.jpg',
@@ -479,7 +479,7 @@ const fooditem = [
     {
         id:54,
         name: 'Unagi Donburi',
-        category: 'Donburi',
+        category: 'don',
         rating: 4.3,
         price:19.99,
         img:'images/order/50.jpg',
@@ -488,7 +488,7 @@ const fooditem = [
     {
         id:55,
         name: 'Hot Green Tea',
-        category: 'Beverages',
+        category: 'drink',
         rating: 4.3,
         price:2.99,
         img:'images/order/51.jpg',
@@ -497,7 +497,7 @@ const fooditem = [
     {
         id:56,
         name: 'Iced Green Tea',
-        category: 'Beverages',
+        category: 'drink',
         rating: 4.3,
         price:3.99,
         img:'images/order/52.jpg',
@@ -506,7 +506,7 @@ const fooditem = [
     {
         id:57,
         name: 'Coke/Diet',
-        category: 'Beverages',
+        category: 'drink',
         rating: 4.3,
         price:2.59,
         img:'images/order/53.png',
@@ -515,7 +515,7 @@ const fooditem = [
     {
         id:58,
         name: 'Bottled Water',
-        category: 'Beverages',
+        category: 'drink',
         rating: 4.3,
         price:1.99,
         img:'images/order/54.png',
@@ -524,7 +524,7 @@ const fooditem = [
     {
         id:59,
         name: 'Matcha Ice Cream',
-        category: 'Desserts',
+        category: 'dessert',
         rating: 4.3,
         price:5.99,
         img:'images/order/55.jpg',
@@ -533,7 +533,7 @@ const fooditem = [
     {
         id:60,
         name: 'Mochi Ice Cream',
-        category: 'Desserts',
+        category: 'dessert',
         rating: 4.3,
         price:4.99,
         img:'images/order/56.jpg',
@@ -542,7 +542,7 @@ const fooditem = [
     {
         id:61,
         name: 'Matcha Cheesecake',
-        category: 'Desserts',
+        category: 'dessert',
         rating: 4.3,
         price:8.99,
         img:'images/order/57.jpg',
@@ -551,7 +551,7 @@ const fooditem = [
     {
         id:62,
         name: 'Dango',
-        category: 'Desserts',
+        category: 'dessert',
         rating: 4.3,
         price:3.99,
         img:'images/order/58.jpg',
@@ -560,7 +560,7 @@ const fooditem = [
     {
         id:63,
         name: 'Taiyaki',
-        category: 'Desserts',
+        category: 'dessert',
         rating: 4.3,
         price:6.99,
         img:'images/order/59.jpg',
@@ -568,4 +568,4 @@ const fooditem = [
     },
 ]
 
-export {fooditem};
+export {foodItem};
