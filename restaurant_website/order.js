@@ -1,25 +1,25 @@
 import {foodItem} from "./items.js";
 
 function displayItems(){
-    var appetizer = document.getElementById('appetizer');
-    var soup = document.getElementById('soup');
-    var salad = document.getElementById('salad');
-    var nigiri = document.getElementById('nigiri');
-    var sushi = document.getElementById('sushi');
-    var maki = document.getElementById('maki');
-    var don = document.getElementById('don');
-    var drink = document.getElementById('drink');
-    var dessert = document.getElementById('dessert');
+    var appetizer = document.getElementById('Appetizer');
+    var soup = document.getElementById('Soup');
+    var salad = document.getElementById('Salad');
+    var nigiri = document.getElementById('Nigiri');
+    var sushi = document.getElementById('Sushi-Set');
+    var maki = document.getElementById('Maki');
+    var don = document.getElementById('Donburi');
+    var drink = document.getElementById('Beverage');
+    var dessert = document.getElementById('Dessert');
 
-    const appetizerData = foodItem.filter(item => item.category == 'appetizer');
-    const soupData = foodItem.filter(item => item.category == 'soup');
-    const saladData = foodItem.filter(item => item.category == 'salad');
-    const nigiriData = foodItem.filter(item => item.category == 'nigiri');
-    const sushiData = foodItem.filter(item => item.category == 'sushi');
-    const makiData = foodItem.filter(item => item.category == 'maki');
-    const donData = foodItem.filter(item => item.category == 'don');
-    const drinkData = foodItem.filter(item => item.category == 'drink');
-    const dessertData = foodItem.filter(item => item.category == 'dessert');
+    const appetizerData = foodItem.filter(item => item.category == 'Appetizer');
+    const soupData = foodItem.filter(item => item.category == 'Soup');
+    const saladData = foodItem.filter(item => item.category == 'Salad');
+    const nigiriData = foodItem.filter(item => item.category == 'Nigiri');
+    const sushiData = foodItem.filter(item => item.category == 'Sushi-Set');
+    const makiData = foodItem.filter(item => item.category == 'Maki');
+    const donData = foodItem.filter(item => item.category == 'Donburi');
+    const drinkData = foodItem.filter(item => item.category == 'Beverage');
+    const dessertData = foodItem.filter(item => item.category == 'Dessert');
 
     appetizerData.map(item => {
         var itemBox = document.createElement('div');
@@ -357,6 +357,33 @@ function displayItems(){
 }
 displayItems();
 
+const categoryListData = [...new Map(foodItem.map(item => [item['category'], item])).values()];
+console.log(categoryListData)
+
+function categoryLists(){
+    var categoryList = document.getElementById('category-list');
+
+    categoryListData.map(item =>{
+        var listMenu = document.createElement('div');
+        listMenu.setAttribute('class', 'list-menu');
+
+        var listImg = document.createElement('img');
+        listImg.src = item.img;
+
+        var listName = document.createElement('a');
+        listName.setAttribute('class', 'list-name');
+        listName.innerText = item.category;
+        listName.setAttribute('href', '#' + item.category);
+
+        listMenu.appendChild(listImg);
+        listMenu.appendChild(listName);
+
+        var cloneListMenu = listMenu.cloneNode(true);
+        categoryList.appendChild(listMenu);
+    })
+}
+categoryLists();
+
 
 document.querySelectorAll('.add-to-cart').forEach(item => {
     item.addEventListener('click', addToCart);
@@ -371,12 +398,13 @@ function addToCart(){
     if(index === -1){
         document.getElementById(itemObject.id).classList.add('toggle-cart');
         cartData = [...cartData, itemObject];
+        console.log(cartData)
     }
     else if(index > -1){
         alert("Added to cart");
     }
 
-    document.getElementById('shopping-cart').innerText = '' +cartData.length + 'Items';
+    document.getElementById('shopping-cart').innerText = ' ' +cartData.length + 'Items';
     //document.getElementById('m-shopping-cart').innerText = '' +cartData.length;
 
     totalAmount();
@@ -389,6 +417,7 @@ function cartItems(){
 
     cartData.map(item => {
         var tableRow = document.createElement('tr');
+
         var rowData1 = document.createElement('td');
         var img = document.createElement('img');
         img.src = item.img;
@@ -399,19 +428,21 @@ function cartItems(){
 
         var rowData3 = document.createElement('td');
         var btn1 = document.createElement('button');
-        btn1.setAttribute('class','remove-item');
-        btn1.innerHTML = '-';
+        btn1.setAttribute('class','drop-item');
+        btn1.innerText = '-';
         var span = document.createElement('span');
         span.innerText = item.quantity;
         var btn2 = document.createElement('button');
-        btn1.setAttribute('class','add-item');
-        btn1.innerHTML = '+';
+        btn2.setAttribute('class','addOn-item');
+        btn2.innerText = '+';
+
         rowData3.appendChild(btn1);
         rowData3.appendChild(span);
         rowData3.appendChild(btn2);
 
         var rowData4 = document.createElement('td');
-        rowData4.innerText = item.price;
+        var rounded_price = parseFloat((Math.round(item.price * 100) / 100).toFixed(2));
+        rowData4.innerText = rounded_price;
 
         tableRow.appendChild(rowData1);
         tableRow.appendChild(rowData2);
@@ -420,21 +451,20 @@ function cartItems(){
 
         tableBody.appendChild(tableRow);
     })
-    document.querySelectorAll('.add-item').forEach(item => {
-        item.addEventListener('click', addItem);
+    document.querySelectorAll('.addOn-item').forEach(item => {
+        item.addEventListener('click', addOnItem);
     })
-    document.querySelectorAll('.remove-item').forEach(item => {
-        item.addEventListener('click', removeItem);
+    document.querySelectorAll('.drop-item').forEach(item => {
+        item.addEventListener('click', dropItem);
     })
 }
 
 var currentPrice = 0;
 
-function addItem(){
-    let itemToAdd = this.parentNode.previousSibliing.innerText;
-    console.log(itemToAdd);
-
-    var addObject = cartData.find(element => element.name = itemToAdd);
+function addOnItem(){
+    let itemAdd = this.parentNode.previousSibling.innerText;
+    
+    var addObject = cartData.find(element => element.name == itemAdd);
     addObject.quantity += 1;
 
     currentPrice = (addObject.price*addObject.quantity - addObject.price*(addObject.quantity - 1))/(addObject.quantity - 1);
@@ -446,15 +476,17 @@ function addItem(){
 
 var flag = false;
 
-function removeItem(){
-    let itemToRemove = this.parentNode.previousSibliing.innerText;
-    let removeObject = cartData.find(element => element.name == itemToRemove);
+function dropItem(){
+    let itemRemove = this.parentNode.previousSibling.innerText;
+    let removeObject = cartData.find(element => element.name == itemRemove);
     let ind = cartData.indexOf(removeObject);
     if(removeObject.quantity > 1){
-        currentPrice = (removeObject.price*removeObject.quantity - removeObject*price*(removeObject.quantity - 1))/(removeObject.quantity);
+        currentPrice = (removeObject.price*removeObject.quantity - removeObject.price*(removeObject.quantity-1))/(removeObject.quantity);
+        removeObject.quantity -= 1;
+        removeObject.price = currentPrice*removeObject.quantity;
     }
     else {
-        document.getElementById(removeObject.id).classList.remove('cart-toggle');
+        document.getElementById(removeObject.id).classList.remove('toggle-cart');
         cartData.splice(ind,1);
         document.getElementById('shopping-cart').innerHTML = '' + cartData.length + 'Items';
         //document.getElementById('m-shopping-cart').innerHTML = '' + cartData.length;
@@ -477,13 +509,17 @@ function removeItem(){
 function totalAmount(){
     var sum = 0;
     cartData.map(item => {
-        sum += item.price;
+        let rounded_price = parseFloat((Math.round(item.price * 100) / 100).toFixed(2));
+        console.log('item price:' + item.price);
+        console.log('rounded price:' + rounded_price);
+        sum += rounded_price;
     })
     document.getElementById('total-item').innerText = 'Items :' + cartData.length;
-    document.getElementById('total-price').innerText = 'Total Amount : $ ' + sum;
+    console.log(document.getElementById('total-price').innerText);
+    document.getElementById('total-price').innerText = 'Total Amount : $' + sum;
 }
 document.getElementById('shopping-cart').addEventListener('click', cartToggle);
-document.getElementById('m-shopping-cart').addEventListener('click', cartToggle);
+//document.getElementById('m-shopping-cart').addEventListener('click', cartToggle);
 
 function cartToggle(){
     if(cartData.length > 0){
