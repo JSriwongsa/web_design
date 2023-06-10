@@ -66,15 +66,16 @@ body{
 #food-container{
     scrollbar-width: none;
 }
-#menu-header .address{
+.address{
     font-size: 0.8rem;
     border: 1px solid var(--main-color);
     color: var(--main-color);
     padding: 5px 10px;
     border-radius: 10px;
-    width: 100px;
+    width: 150px;
     overflow: hidden;
     cursor: pointer;
+    text-align: center;
 }
 .utility i{
     font-size: 0.8rem;
@@ -210,17 +211,12 @@ body{
     color: var(--main-color);
     font-weight: 600;
 }
-/*--------------------------------------------------------------------------------------------------------------------------*/
 .food-items{
     display: none;
-}
-#category-list{
-    
 }
 .cart-toggle{
     display: none;
 }
-/*--------------------------------------------------------------------------------------------------------------------------*/
 #cart-page{
     background: var(--other-color);
     margin: 40px 10px;
@@ -305,5 +301,170 @@ body{
     background: var(--minor-color);
     color: var(--bg-color);
 }
+#respon-view{
+    display: none;
+}
+/*---------- responsive-view---------*/
+@media screen and (max-width:1200px){
+    #container{
+        display: none;
+    }
+    #respon-view{
+        display: grid;
+        grid-template-rows: 120px 1fr 50px;
+        height: 100%;
+        overflow: hidden;
+        width: 100%;
+    }
+    .respon-top{
+        padding: 5px 15px;
+        z-index: 1;
+        background: var(--bg-color);
+    }
+    .item-container{
+        overflow-y: scroll;
+    }
+    .logo-box, .top-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo-box img{
+        width: 80px;
+        height: 80px;
+    }
+    .top-menu{
+        color: var(--main-color);
+    }
+    .top-menu i {
+        font-size: 1rem;
+        cursor: pointer;
+        padding: 10px 5px;
+        border-radius: 50%;
+    }
+    .m-cart-toggle{
+        color: var(--bg-color);
+        background: var(--main-color);
+    }
+    .category-header{
+        display: flex;
+        width: 100%;
+        overflow-x: scroll;
+        position: sticky;
+        top: 0;
+        background: var(--bg-color);
+        z-index: 1;
+        border-bottom: 1px solid var(--other-color);
+        margin: 0;
+    }
+    .toggle-category{
+        display: none;
+        position: relative;
+    }
+    .list-menu{
+        margin: 0 10px;
+        text-align: center;
+    }
+    .list-menu img{
+        width: 60px;
+        height: 60px;
+    }
+    .list-menu:hover{
+        background: none;
+        transform: none;
+
+    }
+    .list-menu:hover img{
+        transform: none;
+        transition: none;    
+    }
+    .list-name{
+        margin: 5px 0;
+        color: var(--main-color);
+        width: max-content;
+        font-size: 1rem;
+    }
+    #food-items{
+        padding: 5px 10px;
+    }
+    .respon-footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 15px;
+        background: var(--bg-color);
+        border-top: 1px solid var(--other-color);
+    }
+    .respon-footer a{
+        color: var(--main-color);
+        text-decoration: none;
+        position: sticky;
+        font-weight: 600;
+    }
+    #category-name{
+        font-size: 1.5rem;
+    }
+    #item-box{
+        width: 150px;
+        height: 200px;
+    }
+    #item-box img{
+        width: 70px;
+        height: 70px;
+    }
+    #item-box p{
+        font-size: 12px;
+    }
+    .list-menu{
+        flex-direction: column;
+    }
+    #cart-page{
+        margin: 3px 0;
+        padding: 10px 5px;
+        padding-bottom: 30px;
+        border-top: 1px solid var(--other-color);
+    }
+    #cart-page table thead td{
+        font-size: 16px;
+    }
+    #cart-page table tbody td{
+        font-size: 16px;
+    }
+    #cart-page table tbody img{
+        width: 60px;
+        height: 60px;
+    }
+    #cart-title{
+        font-size: 20px;
+        display: inline-block;
+    }
+    #cart-total{
+        display: inline-block;
+        color: var(--main-color);
+        padding: 5px 10px;
+        margin: 0;
+        border: 1px solid var(--main-color);
+        float: inline-end;
+    }
+    .checkout-btn{
+        font-size: 14px;
+        background: var(--main-color);
+        padding: 8px 15px;
+        margin: auto;
+    }
+    #Appetizer{
+        margin-top: 15px;
+    }
+}
+@media screen and (max-width:380px){
+    #item-box{
+        height: 200px;
+        width: 150px;
+    } 
+    #food-items{
+        padding: 0;
+    }   
+}
+
 
 

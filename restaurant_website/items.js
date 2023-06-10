@@ -154,7 +154,7 @@ const foodItem = [
     },
     {
         id:18,
-        name: 'Spicy maguro poke Salad',
+        name: 'Spicy maguro Salad',
         category: 'Salad',
         rating: 4.3,
         price:12.99,
@@ -172,7 +172,7 @@ const foodItem = [
     },
     {
         id:20,
-        name: 'Maguro/Shiro Maguro',
+        name: 'Maguro',
         category: 'Nigiri',
         rating: 4.3,
         price:8.99,
