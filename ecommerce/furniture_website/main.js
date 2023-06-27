@@ -8,4 +8,22 @@ if(navBar){
 }
 
 
+let scrollcontainer = document.querySelector('.gallery');
+let backButton = document.getElementById('back-btn');
+let nextButton = document.getElementById('next-btn');
+
+scrollcontainer.addEventListener('wheel', (evt) =>{
+    evt.preventDefault();
+    scrollcontainer.scrollLeft += evt.deltaY;
+});
+
+nextButton.addEventListener('click', () =>{
+    scrollcontainer.style.scrollBehavior = 'smooth';
+    scrollcontainer.scrollLeft += 900;
+});
+backButton.addEventListener('click', () =>{
+    scrollcontainer.style.scrollBehavior = 'smooth';
+    scrollcontainer.scrollLeft -= 900;
+});
+
 
