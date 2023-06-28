@@ -33,11 +33,12 @@ var tabbedNav = new Swiper('.tabs',{
     slidesPerGroup: false,
     spaceBetween: 20,
 });
+
 var theTab = new Swiper('.tabs-box',{
     slidePerView: 1,
     autoHeight: true,
     thumbs: {
         swiper: tabbedNav
     },
-    
-})
+
+});
