@@ -456,7 +456,7 @@ form.search{
 form.search input{
     position: absolute;
 }
-form.search input[type=search]{
+form.search :where(input[type=search], input[type=text]){
     width: 100%;
     height: 46px;
     top: 0;
@@ -754,11 +754,80 @@ main > div{
     color: var(--white-color);
     float: right;
 }
-
-
-
-
-
+/*---------- banner ----------*/
+.banner{
+    position: relative;
+    background-color: rgb(220, 220, 212);
+}
+.banner .wrap{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.banner .bg-image{
+    height: 400px;
+    position: relative;
+}
+.banner .info{
+    padding: 90px 0 ;
+}
+.banner .info span{
+    color:  #454140;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.banner .info h3{
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+/*---------- footer ----------*/
+.inner-footer{
+    padding: 0 0 60px;
+    font-size: 14px;
+    color: var(--based-color);
+}
+.inner-footer .wrap{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.inner-footer .wrap h3{
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 15px;
+}
+.inner-footer .wrap > div:not(.subscribe) h3{
+    font-size: 18px;
+}
+.inner-footer .socials ul{
+    display: flex;
+    gap: 15px;
+    font-size: 20px;
+    color: var(--dark-color);
+}
+footer a{
+    transition: color 0.3s;
+}
+footer a:hover{
+    color: var(--dark-color);
+}
+footer .socials a:hover{
+    color: var(--based-color);
+}
+.copyright{
+    text-align: center;
+    font-size: 12px;
+}
+.scroll-top{
+    position: fixed;
+    bottom: 2.3rem;
+    right: 2.3rem;
+}
+.scroll-top i{
+    background: var(--based-color);
+    color: var(--white-color);
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 30px;
+}
 
 
 @media only screen and (max-width:576px){
