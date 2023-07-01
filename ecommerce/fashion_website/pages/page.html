@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="page.css">
     <link rel="shortcut icon" href="images/icon.png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 </head>
 <body>
     <div id="page" class="page-single">
@@ -182,18 +183,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="container">
-                    <div class="wrap">
-                        <div class="breadcrumb list-inline">
-                            <ul>
-                                <li><a href="">Home</a></li>
-                                <li><a href="">Products</a></li>
-                                <li><a href="">Tops</a></li>
-                                <li><span>Castleton Green Halterneck Top</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
                 <div id="search-float" class="search-float">
                     <div class="container wide">
                         <form action="" class="search">
@@ -204,9 +193,65 @@
                     </div>
                 </div>
             </div>
+            <div class="container">
+                <div class="wrap">
+                    <div class="breadcrumb list-inline">
+                        <ul>
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Products</a></li>
+                            <li><a href="">Tops</a></li>
+                            <li><span>Castleton Green Halterneck Top</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </header>
         <main>
-            
+            <div class="section">
+                <div class="container">
+                    <div class="wrap">
+                        <div class="product dotgrid">
+                            <div class="wrapper">
+                                <div class="image">
+                                    <div class="outer-main">
+                                        <div class="main-image swiper">
+                                            <div class="wrap swiper-wrapper">
+                                                <div class="item swiper-slide"><img src="images/top1.jpg" alt=""></div>
+                                                <div class="item swiper-slide"><img src="images/top1-1.jpg" alt=""></div>
+                                                <div class="item swiper-slide"><img src="images/top1-2.jpg" alt=""></div>
+                                                <div class="item swiper-slide"><img src="images/top1-3.jpg" alt=""></div>
+                                            </div>    
+                                        </div>
+                                        <div class="custom-pagination">
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+                                    </div>
+                                    <div class="outer-thumb ob-cover">
+                                        <div class="thumbnail-image swiper" >
+                                            <div class="wrap swiper-wrapper">
+                                                <div class="item swiper-slide">
+                                                    <div class="thumb-wrap"><img src="images/top1.jpg" alt=""></div>
+                                                </div>
+                                                <div class="item swiper-slide">
+                                                    <div class="thumb-wrap"><img src="images/top1-1.jpg" alt=""></div>
+                                                </div>
+                                                <div class="item swiper-slide">
+                                                    <div class="thumb-wrap"><img src="images/top1-2.jpg" alt=""></div>
+                                                </div>
+                                                <div class="item swiper-slide">
+                                                    <div class="thumb-wrap"><img src="images/top1-3.jpg" alt=""></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summary"></div>
+                            </div>
+                        </div>
+                        <div class="product detail"></div>
+                    </div>
+                </div>
+            </div>
         </main>
         <footer></footer>
     </div>
@@ -259,6 +304,7 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="page.js"></script>
 </body>
 </html>

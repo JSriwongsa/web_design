@@ -183,9 +183,10 @@ nav.menu .sub-menu li{
 }
 /*---------- header ----------*/
 .dotgrid .wrapper{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
+    display: var(--display,grid);
+    --grid-col:175px;
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--grid-col),100%), 1fr));
+    gap: var(--gutter, 30px);
 }
 .dotgrid .dot-image{
     position: relative;
@@ -499,6 +500,29 @@ form.search :where(i:last-child){
     overflow: hidden;
     text-overflow: ellipsis;
 }
+/*----- product -----*/
+.product .wrapper{
+    --grid-col:331px
+}
+.product .main-image img{
+    width: 100%;
+}
+.product .outer-thumb{
+    display: none;
+}
+.product .outer-thumb .item{
+    height: fit-content !important;
+    cursor: pointer;
+}
+.product .thumb-wrap{
+    position: relative;
+    width: 70px;
+    height: 90px;
+}
+.product .custom-pagination{
+    position: relative;
+    height: 40px;
+}
 
 
 
@@ -507,14 +531,33 @@ form.search :where(i:last-child){
 
 
 
-
-
-
-
-
-
-
-
+@media(min-width:481px){
+    .product.wrapper{
+        --gutter:60px;
+    }
+    .product.dotgrid .image{
+        position: relative;
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;
+        height: min-content;
+        overflow: hidden;
+    }
+    .product .outer-main{
+        width: calc(100% -85px);
+        height: 100%;
+        margin: 0 0 0 85px;
+    }
+    .product .outer-thumb{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .custom-pagination{
+        display: none;
+    }
+}
 
 
 
