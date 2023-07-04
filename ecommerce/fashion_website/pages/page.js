@@ -65,3 +65,20 @@ trigger.forEach((btn) => {
         body.classList.add('active');
     });
 });
+
+//popup
+const sorter = document.querySelector('.sort-list');
+if(sorter){
+    const sortLi = sorter.querySelectorAll('li');
+    sorter.querySelector('.opt-trigger').addEventListener('click', function(){
+        sorter.querySelector('ul').classList.toggle('show');
+    });
+
+    sortLi.forEach((item) => item.addEventListener('click', function(){
+        sortLi.forEach((i) => li != this ? li.classList.remove('active'): null);
+
+        this.classList.add('active');
+        sorter.querySelector('.opt-trigger span.value').textContent = this.textContent;
+        sorter.querySelector('ul').classList.toggle('show')
+    }))
+}
