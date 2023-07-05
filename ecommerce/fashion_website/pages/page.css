@@ -934,8 +934,115 @@ form :where(input, textarea, select)::placeholder{
 .inner-footer .list-block .company-address:hover p{
     color: var(--dark-color);
 }
-
-
+/*--------- popup --------*/
+.data-popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    pointer-events: none;
+}
+.data-popup .wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.data-popup .data-content{
+    position: relative;
+    background-color: var(--white-color);
+    width: var(--data-width, 400px);
+    padding: 40px 20px;
+    max-width: calc(100vw -50px);
+    max-height: calc(100vh -60px);
+    border-radius: 5px;
+    overflow-y: auto;
+    pointer-events: auto;
+}
+.data-popup .close-trigger, .data-popup .form span{
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px;
+    align-items: center;
+}
+.data-popup .form{
+    position: relative;
+}
+.data-popup label{
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: block;
+}
+.data-popup .form input{
+    background-color: lightgrey;
+    color: var(--dark-color);
+    padding: 5px 30px 5px 10px;
+    border: none;
+    font-size: 14px;
+}
+.data-popup .form span{
+    top: auto;
+    bottom: 0;
+    right: 10px;
+    cursor: pointer;
+}
+.data-popup .form span:hover{
+    color: gray;
+}
+.data-popup .media-share{
+    margin-top: 20px;
+}
+.data-popup form>div{
+    margin-top: 20px;
+}
+.data-popup form input, textarea{
+    border-color: var(--main-color);
+}
+form .button button{
+    cursor: pointer;
+}
+form .button .secondary-btn{
+    border-radius: 0;
+}
+.data-popup h3, form .button{
+    text-align: center;
+}
+.data_review .data-content{
+    --data-width: 500px;
+}
+.data_review .dotgrid .wrapper{
+    --gutter: 10px;
+}
+.data_review .stars input{
+    display: none;
+}
+.data_review .stars > input:checked ~ label{
+    color: var(--based-color);
+}
+.data_review .stars label{
+    font-size: 16px;
+    margin: 0;
+    cursor: pointer;
+}
+.data_review :where(.rating, .stars){
+    display: flex;
+    gap: 5px;
+}
+.data_review .stars{
+    flex-direction: row-reverse;
+}
+.data-popup{
+    display: none;
+    animation: var(--fade);
+}
+.data-popup.active{
+    display: block;
+}
 
 
 

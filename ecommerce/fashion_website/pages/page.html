@@ -307,8 +307,8 @@
                                         <div class="product-control list-inline">
                                             <ul>
                                                 <li><a href=""><i class='bx bx-heart' ></i><span>Add to List</span></a></li>
-                                                <li><a href=""><i class='bx bx-share' ></i><span>Share</span></a></li>
-                                                <li><a href=""><i class='bx bx-help-circle' ></i><span>Help</span></a></li>
+                                                <li><a href="#0" trigger-button data-target="data-share"><i class='bx bx-share' ></i><span>Share</span></a></li>
+                                                <li><a href="#0" trigger-button data-target="data-question"><i class='bx bx-help-circle' ></i><span>Help</span></a></li>
                                             </ul>
                                         </div>
                                         <div class="shipping">
@@ -375,7 +375,7 @@
                                                 <span>2 reviews</span>
                                             </div>
                                             <div class="button">
-                                                <a href="" class="primary-btn">Write a Review</a>
+                                                <a href="#0" class="primary-btn" trigger-button data-target="data-review">Write a Review</a>
                                             </div>
                                         </div>
                                         <div class="body-review">
@@ -674,6 +674,82 @@
             </div>
         </div>
     </div>
+
+    <div id="data-share" class="data-popup data_share">
+        <div class="wrap">
+            <div class="data-content">
+                <a href="#0" class="close-trigger" close-button><i class='bx bx-x'></i></a>
+                <div class="form">
+                    <label>Copy link</label>
+                    <input type="text" disabled value="https://www.youtube.com/watch?v=FMgraHfrw_o">
+                    <span><i class='bx bx-copy' ></i></span>
+                </div>
+                <div class="media-share list-inline">
+                    <label>Share</label>
+                    <ul>
+                        <lu><a href=""><i class='bx bxl-instagram' ></i></a></lu>
+                        <lu><a href=""><i class='bx bxl-twitter' ></i></a></lu>
+                        <lu><a href=""><i class='bx bxl-pinterest' ></i></a></lu>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="data-question" class="data-popup data_question">
+        <div class="wrap">
+            <div class="data-content">
+                <a href="#0" class="close-trigger" close-button><i class='bx bx-x'></i></a>
+                <h3>Question</h3>
+                <form action="">
+                    <div><input type="text" placeholder="Name"></div>
+                    <div><input type="text" placeholder="Email"></div>
+                    <div><textarea placeholder="Leave us your question(s)" cols="30" rows="4"></textarea></div>
+                    <div class="button">
+                        <button type="submit" class="secondary-btn">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="data-review" class="data-popup data_review">
+        <div class="wrap">
+            <div class="data-content">
+                <a href="#0" class="close-trigger" close-button><i class='bx bx-x'></i></a>
+                <h3>Leave a Review</h3>
+                <form action="">
+                    <div class="dotgrid">
+                        <div class="wrapper">
+                            <div><input type="text" placeholder="Name"></div>
+                            <div><input type="text" placeholder="Email"></div>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <span>Rating: </span>
+                        <div class="stars">
+                            <input type="radio" name="rating" id="star5">
+                            <label for="star5"><i class='bx bxs-star' ></i></label>
+                            <input type="radio" name="rating" id="star4">
+                            <label for="star4"><i class='bx bxs-star' ></i></label>
+                            <input type="radio" name="rating" id="star3">
+                            <label for="star3"><i class='bx bxs-star' ></i></label>
+                            <input type="radio" name="rating" id="star2">
+                            <label for="star2"><i class='bx bxs-star' ></i></label>
+                            <input type="radio" name="rating" id="star1">
+                            <label for="star1"><i class='bx bxs-star' ></i></label>
+                        </div>
+                    </div>
+                    <div><input type="text" placeholder="Review title"></div>
+                    <div><textarea placeholder="Your review" cols="30" rows="4"></textarea></div>
+                    <div class="button">
+                        <button type="submit" class="secondary-btn">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="page.js"></script>
