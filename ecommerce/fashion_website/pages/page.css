@@ -634,6 +634,18 @@ form :where(input, textarea, select)::placeholder{
 .summary .product-color button.color2{
     background-color: #13274F;
 }
+.summary .product-color button.color3{
+    background-color: black;
+}
+.summary .product-color button.color4{
+    background-color: whitesmoke;
+}
+.summary .product-color button.color5{
+    background-color: #dac292;
+}
+.summary .product-color button.color6{
+    background-color: red;
+}
 .summary .product-color button.selected, .summary .product-color button:hover:not(.selected){
     box-shadow: inset 0 0 0 1px var(--white-color);
 }
@@ -1071,7 +1083,7 @@ form .button .secondary-btn{
 .product-list li{
     margin-bottom: 30px;
 }
-.product-list .grouping{
+.product-list li .grouping{
     position: relative;
     float: left;
     padding-left: 45px;
@@ -1407,9 +1419,6 @@ input.checking:checked::after{
 .category-content .dotgrid .wrapper{
     --grid-col:220px;
 }
-
-
-
 
 
 
