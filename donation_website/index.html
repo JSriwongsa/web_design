@@ -4,84 +4,97 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blood Bank</title>
-    <link rel="shortcut icon" href="images/logo.png">
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="images/logo.png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <header>
-        <div class="container-content">
-            <div class="container">
-                <div class="icon flex-1">
-                    <div class="box">
-                        <i class='bx bxl-facebook'></i>
-                        <i class='bx bxl-instagram-alt' ></i>
-                        <i class='bx bxl-twitter' ></i>
-                    </div>
-                    <div class="box">
-                        <i class='bx bxs-phone' ></i>
-                        <label for="">+123 456 7890</label>
-                        <i class='bx bxs-envelope' ></i>
-                        <label>info@example.com</label>
+    <div id="page" class="site">
+        <header>
+            <div class="header-top">
+                <div class="container">
+                    <div class="wrap">
+                        <div class="social">
+                            <ul>
+                                <li><a href=""></a><i class='bx bxl-facebook' ></i></li>
+                                <li><a href=""></a><i class='bx bxl-instagram-alt' ></i></li>
+                                <li><a href=""></a><i class='bx bxl-twitter' ></i></li>
+                            </ul>
+                        </div>
+                        <div class="options">
+                            <div class="other-1">
+                                <ul>
+                                    <li><a href="#"><i class='bx bxs-phone' ></i><span class="phone">+123 456 789</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="other-2">
+                                <ul>
+                                    <li><a href="#"><i class='bx bxs-envelope' ></i><span class="phone">info@example.com</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="langs">
+                                <ul>
+                                    <li><a href="#"><span class="flag us"></span><span>English</span><i class='bx bxs-chevron-down' ></i></a>
+                                        <ul>
+                                            <li><a href="#"><span class="flag sp"></span><span>Español</span></a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <hr>
-                <nav>
-                    <div class="logo">
-                        <span>Blood</span> Bank
-                        <img src="images/logo-1.png" alt="">
-                    </div>
-                    <ul id="menu">
-                        <li><a href="#">Home</a></li>
-                        <li>
-                            <a href="#">Donate</a><i class='bx bx-chevron-down'></i>
-                            <div class="submenu">
-                                <ul>
-                                    <li><a href="#">Donate Blood</a></li>
-                                    <li><a href="#">Donation types</a></li>
-                                </ul>
-                            </div>
-                        </li>    
-                        <li>
-                            <a href="#">Learn</a><i class='bx bx-chevron-down'></i>
-                            <div class="submenu">
-                                <ul>
-                                    <li><a href="#">Blood types</a></li>
-                                    <li><a href="#">First time Blood Doner</a></li>
-                                    <li><a href="#">Scientific research</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#">Support</a><i class='bx bx-chevron-down'></i>
-                            <div class="submenu">
-                                <ul>
-                                    <li><a href="#">Volunteer</a></li>
-                                    <li><a href="#">Partnerships</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#">Service</a><i class='bx bx-chevron-down'></i>
-                            <div class="submenu">
-                                <ul>
-                                    <li><a href="#">Laboratory services</a></li>
-                                    <li><a href="#">Clinical apheresis services </a></li>
-                                    <li><a href="#">Medical consultation</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                    <i id="icon-menu" class='bx bx-menu' ></i>
-                </nav>
             </div>
-        </div>
-    </header>
 
-
-    
-    <script src="main.js"></script>
+            <div class="header-main">
+                <div class="container">
+                    <div class="wrap">
+                        <div class="logo">
+                            <a href="#" class="menu-trigger"><i class='bx bx-menu'></i></a>
+                            <a href=""><span>Blood</span> Bank</a>
+                            <img src="images/logo-1.png" alt="">
+                        </div>
+                        <nav>
+                            <ul>
+                                <li><a href="#"><span>Home</span></a></li>
+                                <li><a href="#"><span>Donate</span><i class='bx bx-chevron-down' ></i></a>
+                                    <ul class="submenu">
+                                        <li><a href="">Donate Blood</a></li>
+                                        <li><a href="">Donation types</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#"><span>Learn</span><i class='bx bx-chevron-down' ></i></a>
+                                    <ul class="submenu">
+                                        <li><a href="">Blood types</a></li>
+                                        <li><a href="">First time Blood Doner</a></li>
+                                        <li><a href="">Scientific research</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#"><span>Support</span><i class='bx bx-chevron-down' ></i></a>
+                                    <ul class="submenu">
+                                        <li><a href="">Volunteer</a></li>
+                                        <li><a href="">Partnerships</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#"><span>Service</span><i class='bx bx-chevron-down' ></i></a>
+                                    <ul class="submenu">
+                                        <li><a href="">Laboratory services</a></li>
+                                        <li><a href="">Clinical apheresis services </a></li>
+                                        <li><a href="">Medical consultation</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="icon">
+                            <ul>
+                                <li><a href=""><i class='bx bx-search' ></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
 </body>
 </html>
