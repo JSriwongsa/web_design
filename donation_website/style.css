@@ -102,6 +102,10 @@ header li a:hover{
     color: #D22B2B;
     cursor: pointer;
 }
+
+.header-top, .header-main nav > ul{
+    display: none;
+}
 /*-------- header-main ---------*/
 .header-main .container .wrap .logo img{
     width: 60px;
@@ -143,10 +147,118 @@ header li a:hover{
 .header-main :where(nav > ul > li >a span, .logo){
     font-weight: 600;
 }
+/*---------- mobile menu ----------*/
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0 0 0 /50%);
+    pointer-events: none;
+    z-index: 15px;
+    transition: 0.5s ease;
+    opacity: 0;
+}
+.overlay.active{
+    opacity: 1;
+    pointer-events: all;
+}
+nav.mobile{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 100%;
+    max-width: calc(100vw -60px);
+    padding: 30px;
+    background-color: whitesmoke;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    left: -100%;
+    visibility: hidden;
+    transition: 0.5s ease;
+}
+nav.mobile.active{
+    left: 0;
+    visibility: visible;
+}
+nav.mobile > ul > li{
+    position: relative;
+}
+nav.mobile > ul > li > a{
+    position: relative;
+    display: block;
+    padding: 13px 0;
+}
+.close-trigger{
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    transition: color 0.3s;
+}
+.close-trigger:hover{
+    color: #D22B2B;
+}
+nav.mobile .close-trigger{
+    position: absolute;
+    right: -40px;
+    top: 0;
+}
+nav.mobile > ul{
+    overflow-y: auto;
+    margin-bottom: 30px;
+}
+nav.mobile > ul >li > span{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 55px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+nav.mobile > ul >li > span:hover{
+    color: #D22B2B;
+}
+nav.mobile .submenu{
+    height: 0;
+    overflow: hidden;
+}
+nav.mobile .submenu a{
+    color: #E34234;
+    padding-left: 15px;
+    transition: color 0.3s;
+}
+nav.mobile .submenu a:hover{
+    color: black;
+}
+
+
+
+
+
+
+
+
+
 
 
 
 @media only screen and (min-width:992px){
+    .header-main nav > ul{
+        display: flex;
+    }
+    .header-top{
+        display: block;
+    }
     .header-main .menu-trigger{
     display: none;
     }
